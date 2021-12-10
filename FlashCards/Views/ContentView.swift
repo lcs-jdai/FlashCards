@@ -23,6 +23,28 @@ struct ContentView: View {
             })
                 .buttonStyle(.bordered)
             
+            
+            
+            
+            //show question
+            Text("Mitochondria")
+                .font(.largeTitle)
+                .multilineTextAlignment(.center)
+            
+            Button(action: {
+                // Review the answer
+                
+            }, label: {
+                Text ("Another")
+            })
+                .buttonStyle(.bordered)
+            
+            
+            
+            
+            
+            
+            
         }
         .padding()
     }
