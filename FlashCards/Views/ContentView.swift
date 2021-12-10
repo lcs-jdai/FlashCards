@@ -28,7 +28,9 @@ struct ContentView: View {
             
             Button(action: {
                 // Review the answer
+                withAnimation{
                 isAnswerShowing = true
+                }
             }, label: {
                 Text ("Check")
             })
