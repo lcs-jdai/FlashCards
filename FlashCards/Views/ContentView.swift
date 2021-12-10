@@ -28,7 +28,7 @@ struct ContentView: View {
             
             Button(action: {
                 // Review the answer
-                
+                isAnswerShowing = true
             }, label: {
                 Text ("Check")
             })
@@ -41,7 +41,7 @@ struct ContentView: View {
             Text(currentCard.answer)
                 .font(.largeTitle)
                 .multilineTextAlignment(.center)
-                .opacity(isAnswerShowing ? 1.0 = 0.0)
+                .opacity(isAnswerShowing ? 1.0 : 0.0)
 
             
             Button(action: {
@@ -49,12 +49,13 @@ struct ContentView: View {
                 currentCard = listOfCards.randomElement()!
                 
                 //Hide the answer
+                isAnswerShowing = false
                 
             }, label: {
                 Text ("Another")
             })
                 .buttonStyle(.bordered)
-                .opacity(isAnswerShowing ? 1.0 = 0.0)
+                .opacity(isAnswerShowing ? 1.0 : 0.0)
 
             
             
