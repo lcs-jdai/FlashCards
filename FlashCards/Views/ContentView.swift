@@ -12,7 +12,7 @@ struct ContentView: View {
     //MARK: Stored properties
     //Store the card to work with
     //it is randomly selected from the list of cards
-    var currentCard = listOfCards.randomElement()!
+    @State var currentCard = listOfCards.randomElement()!
     
     
     //MARK: Computed properties
@@ -40,7 +40,10 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
             
             Button(action: {
-                // Review the answer
+                // Get another question
+                currentCard = listOfCards.randomElement()!
+                
+                //Hide the answer
                 
             }, label: {
                 Text ("Another")
